@@ -1,0 +1,22 @@
+<div class="row">
+    <section>
+        <div class="col-xs-12">
+            <div class="select">
+                <select ng-model="search">
+                    <option value="">selecione uma categoria</option>
+                    <option value="animais">Animais</option>
+                    <option value="cidade">Cidade</option>
+                    <option value="comida">Comida</option>
+                    <option value="esportes">Esportes</option>
+                </select>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="row" ng-init="getNews()">
+    <section>
+        <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="data in news | filter: search ">
+            <news info="data"></news>
+        </div>
+    </section>
+</div>

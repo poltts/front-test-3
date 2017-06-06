@@ -1,0 +1,12 @@
+ <div class="row">
+    <section ng-init="getNewsId()"> 
+        <div class="box">
+            <figure>
+                <img ng-src="{{ newsData.image_large}}" alt="one img of {{ newsData.category }}"/>
+            </figure>
+            <h1 class="single" >{{ newsData.category}}</h1>
+            <p class="single">{{ newsData.txt_full}}</p>
+            <div class="btn"><a href="javascript:history.back(1)">Voltar</a></div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,70 @@
+<div class="row">
+    <section>
+        <div class="col-md-12"> 
+            <slide images="images"></slide> 
+        </div>
+    </section>
+</div>
+<div class="row">
+    <di class="col-xs-12">
+        <ul>
+            <li ng-class="{active: activeTab == 'tab1', '': activeTab != '/tab1'}" ng-click="changeTab('tab1')">
+                <p>lorem</p>
+            </li>
+            <li ng-class="{active: activeTab == 'tab2', '': activeTab != '/tab2'}" ng-click="changeTab('tab2')">
+                <p>ipsum</p>
+            </li>
+            <li ng-class="{active: activeTab == 'tab3', '': activeTab != '/tab3'}" ng-click="changeTab('tab3')">
+                <p>dolor</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row" ng-if="isActiveTab('tab1')">
+    <section>
+        <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="box in boxes"> 
+            <box info="box"></box>
+        </div>
+    </section>
+</div>
+<div class="row"  ng-if="isActiveTab('tab2')">
+   <section>
+        <div class="col-md-12"> 
+                <div class="table">
+
+                <div class="table-content"> 
+                    <div class="body"> 
+                        <div class="row">
+                            <div class="cell">string</div>
+                            <div class="cell">integer</div>
+                            <div class="cell">boolean</div>
+                        </div>
+                        <div class="row" ng-repeat="data in tableData">
+                            <div class="cell">"{{data.string}}"</div>
+                            <div class="cell">{{data.integer}}</div>
+                            <div class="cell">{{data.boolean}}</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+</div>
+<div class="row" ng-if="isActiveTab('tab3')">
+    <section>
+        <div class="col-xs-12 col-sm-6  col-md-6">
+            <article>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis lacus pellentesque, pharetra nisi eu, molestie nunc. Integer libero erat, venenatis volutpat tellus cursus, condimentum condimentum arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elit in convallis vulputate. Fusce gravida id tellus ut pharetra. Aliquam erat volutpat. Mauris non aliquam eros. Maecenas quis tristique velit.
+                </p> 
+            </article>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6"> 
+            <article>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis lacus pellentesque, pharetra nisi eu, molestie nunc. Integer libero erat, venenatis volutpat tellus cursus, condimentum condimentum arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit elit in convallis vulputate. Fusce gravida id tellus ut pharetra. Aliquam erat volutpat. Mauris non aliquam eros. Maecenas quis tristique velit.
+                </p> 
+            </article>
+        </div>
+    </section>
+</div>

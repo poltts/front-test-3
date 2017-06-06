@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #000000;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  margin: 0px;
+  padding: 0px;
+}
+header nav {
+  position: relative;
+  height: auto;
+  width: 100%;
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+  /* Nav home */
+}
+header nav ul {
+  display: inline-block;
+  list-style-type: none;
+  width: 100%;
+  height: auto;
+  background: #000000;
+  margin: 0px;
+  padding: 0px;
+}
+header nav ul > li {
+  display: inline-block;
+  list-style-type: none;
+  width: auto;
+  height: auto;
+  padding: .5% 1%;
+  cursor: pointer;
+}
+header nav ul > li > p {
+  font-family: inherit;
+  font-size: 116.67%;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+header nav ul > li:hover {
+  background: #ffffff;
+  transition: background-color 0.2s ease-in;
+}
+header nav ul > li:hover > p {
+  color: #000000;
+}
+main {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  max-width: 1024px;
+  min-width: 320px;
+  margin: 5% auto;
+  padding: 0px;
+  text-align: center;
+  /* Nav home */
+  /* Slide home */
+}
+main ul {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  margin: 2% auto;
+  padding: 0px;
+  text-align: center;
+  border-bottom: 1px solid #cccccc;
+}
+main ul li {
+  display: inline-block;
+  width: 20%;
+  margin: 0px 2%;
+  height: 40px;
+  padding: 0px;
+  cursor: pointer;
+  background: #eeeeee;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+main ul li > p {
+  color: #868686;
+  margin: 12px 0px 0px 0px;
+  font-family: inherit;
+  font-size: 116.67%;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+main ul li:hover {
+  background: rgba(204, 204, 204, 0.8);
+  transition: background-color 0.2s ease-in;
+}
+main ul li:hover > p {
+  color: #ffffff;
+}
+main ul li.active {
+  background: #858585;
+}
+main ul li.active > p {
+  color: #fff;
+}
+main .slide {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  margin: 2% auto;
+  padding: 0px;
+  overflow: hidden;
+}
+main .slide > .content {
+  display: none;
+}
+main .slide > .content figure {
+  position: relative;
+  width: 850px;
+  height: 520px;
+  margin: 0px auto;
+  padding: 0px;
+}
+main .slide > .content figure > a > img {
+  border: none;
+  width: auto;
+  height: auto;
+}
+main .slide > .content figure > figcaption {
+  position: absolute;
+  bottom: 0px;
+  font-family: inherit;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 2%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 108.33%;
+}
+main .slide > .content:first-child {
+  display: block;
+}

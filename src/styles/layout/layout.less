@@ -1,0 +1,256 @@
+@import (reference) 'vars.less';
+/* Layout defaults */
+.layout{
+    font-family: @font-name-default;
+    font-size: @font-size-default;
+    color: @font-color-default;
+        .clean;
+        .a-center;
+}
+
+.clean{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Alginments and Text */
+.a-center{ text-align: center; }
+.a-left{ text-align: left; }
+.a-right{ text-align: right; }
+.a-justify{ text-align: justify; }
+
+.uppercase{ text-transform: uppercase; }
+.lowercase{ text-transform: lowercase; }
+.capitalize{ text-transform: capitalize; }
+
+.bold{ font-weight: bold; }
+
+.letter-spc(@size){ letter-spacing: @size; }
+
+/* Borders  */
+.border(@size,@type,@color){ border: @size @type @color; }
+
+.border-bottom(@size,@type,@color){ border-bottom: @size @type @color; }
+.border-round(@size){ 
+    border-radius: @size; 
+        -webkit-border-radius: @size;
+        -moz-border-radius: @size;
+ }
+
+/* Effects  */
+.box-shadow1{
+    box-shadow: 3px 3px 10px -1px rgba(0,0,0,.4);
+         -moz-box-shadow: 3px 3px 10px -1px rgba(0,0,0,.4);
+         -webkit-box-shadow: 3px 3px 10px -1px rgba(0,0,0,.4); 
+}
+/* Animations  */
+.transition(@property, @delay, @animation){
+    transition: @property @delay @animation; 
+        -webkit-transition: @property @delay @animation;
+        -moz-transition: @property @delay @animation;
+        -o-transition: @property @delay @animation;
+    }
+
+/* Components */
+.list-default{
+    ul{
+        display: inline-block;
+        list-style-type: none;
+        width: 100%;
+        height: auto;
+        background: @list-default-bg-color;
+            .clean;
+
+        > li{
+            display: inline-block;
+            list-style-type: none;
+            width: auto;
+            height: auto;
+            padding: .5% 1%;
+            cursor: pointer;
+
+            > p{
+                font-family: inherit;
+                font-size: 116.67%;
+                color: @list-default-color;
+                    .uppercase;
+                    .bold;
+                > a{
+                    text-decoration: none;
+                    color: inherit;
+                }    
+            }
+
+            &:hover{
+                background:  @list-default-bg-color-hover;
+                    .transition(background-color, 0.2s, ease-in);
+                
+                > p{ color:  @list-default-color-hover;}
+            }
+        }
+    }
+
+} 
+
+.list-home{
+    ul{
+        display: inline-block;
+        width: 100%;
+        height: auto; 
+        margin: 2% auto;
+        padding: 0px;
+            .a-center;
+            .border-bottom(1px,solid,@list-home-border-color);
+
+            @media (max-width: 500px){
+                margin: 1% auto;
+            }
+
+        li{
+            display: inline-block;
+            width: 20%;
+            margin: 0px 2%; 
+            height: 40px;
+            padding: 0px;
+            cursor: pointer;
+            background: @list-home-bg-color;
+
+                .border-round(10px 10px 0px 0px);
+
+                @media (max-width: 500px){
+                    width: 29%;
+                    margin: 0px 1%;
+                }
+
+
+                > p{
+                    color: @list-home-color;
+                    margin: 12px 0px 0px 0px;
+                    font-family: inherit;
+                    font-size: 116.67%;
+                    .bold;
+                    .a-center;
+                    .uppercase;
+                    .letter-spc(1px);
+                }
+
+            &:hover{
+               background: @list-home-bg-color-hover;
+                .transition(background-color, 0.1s, ease-in);
+
+                > p{ color: @list-home-color-hover; }
+            }
+            &:active{
+               background: @list-home-bg-color-hover;
+                .transition(background-color, 0.2s, ease-in);
+
+                > p{ color: @list-home-color-hover; }
+            }
+            &.active{
+                 background:  @list-home-bg-color-active; 
+                 > p{ color: #fff;}
+            }
+
+
+
+
+        }
+    } 
+}
+
+ .slide-default{
+
+    .slide.ng-hide-add,
+    .slide.ng-hide-remove { 
+        display: block !important;
+            .transition( all, linear, 0.5s);
+    }
+    .slide.ng-hide-add.ng-hide-add-active,
+    .slide.ng-hide-remove {
+        opacity: 0;
+    }
+    .slide.ng-hide-add,
+    .slide.ng-hide-remove.ng-hide-remove-active {
+        opacity: 1;
+    }
+    .slide{
+        margin-bottom: 2%;
+    }
+
+ }
+.btn-read-more{
+    background: rgb(205,205,205);
+    width: 110px;
+    height: auto;
+    color: rgb(255,255,255);
+    padding: 13px 0px; 
+    cursor: pointer;
+        .border-round(10px);
+        .a-center;
+        .uppercase;
+        .bold;
+
+        &:hover{
+            background: rgb(135,135,135);
+            color: rgb(255,255,255);
+                .transition(background-color, 0.2s, ease-in);
+        }
+        > a{
+            text-decoration: none;
+            color: inherit;
+        }
+}
+.table-default{
+    .table-content{
+        display: table;
+        width: 100%;
+    }
+    .row {
+         display: table-row; 
+
+         &:first-child{
+            background: rgb(204,204,204) !important;
+                .cell{
+                    color: rgb(255,255,255);
+                    .uppercase; 
+                }
+         }
+          &:nth-child(even){
+            background: rgb(255,255,255);
+          }
+          &:nth-child(odd){
+             background: rgb(238,238,238); 
+          }
+     } 
+    .cell { 
+        display: table-cell;
+        padding: 1% 0px;
+        color: rgb(133,133,133);
+            .bold;
+            .lowercase;
+            .border(1px, solid, rgb(133,133,133));
+
+            @media (max-width: 500px){  
+               padding: 4%;
+
+            }
+
+    }
+    .header { 
+        display: table-header-group;  
+    }
+    .footer {
+        background: rgb(133,133,133);
+        display: table-footer-group;
+        font-weight: bold;
+    }
+    .body { display: table-row-group;  }
+}
+
+.select-default{
+    background: rgb(255,255,255) url('../../../dist/img/icon-arrow-down.png') center right no-repeat;
+    background-size: 15% 100%;
+    background-position: 98%;
+    margin: 1% auto;
+
+}
