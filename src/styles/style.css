@@ -162,32 +162,41 @@ main ul li.active {
 main ul li.active > p {
   color: #fff;
 }
-main .slide.ng-hide-add,
-main .slide.ng-hide-remove {
-  display: block !important;
-  transition: all linear 0.5s;
-  -webkit-transition: all linear 0.5s;
-  -moz-transition: all linear 0.5s;
-  -o-transition: all linear 0.5s;
+main .slider {
+  width: 100%;
+  height: 530px;
+  overflow: hidden;
+  text-align: center;
 }
-main .slide.ng-hide-add.ng-hide-add-active,
-main .slide.ng-hide-remove {
+main .slider > .slide {
+  width: auto;
+  height: auto;
+  margin: 1% auto;
+  position: relative;
+}
+main .slider > .slide.ng-hide-add,
+main .slider > .slide.ng-hide-remove {
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+main .slider > .slide.ng-hide-add.ng-hide-add-active,
+main .slider > .slide.ng-hide-remove {
   opacity: 0;
 }
-main .slide.ng-hide-add,
-main .slide.ng-hide-remove.ng-hide-remove-active {
+main .slider > .slide.ng-hide-add,
+main .slider > .slide.ng-hide-remove.ng-hide-remove-active {
   opacity: 1;
-}
-main .slide {
-  margin-bottom: 2%;
 }
 main .slide-counter {
   display: inline-block;
-  margin: 0 0 0 2%;
+  margin: 0px;
+  width: 100%;
 }
 main .slide-counter .pag {
   position: relative;
-  width: 10%;
+  width: 50%;
   height: 20px;
   display: inline-block;
   margin: 2% auto;
@@ -198,9 +207,21 @@ main .slide-counter .pag .circle {
   width: 20px;
   height: 20px;
   background: #cccccc;
+  margin: 0 2% 0 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 main .slide-counter .pag .circle.active {
-  background: #333;
+  background: #333333;
+}
+main .slide-counter .pag .circle.active:hover {
+  background: rgba(51, 51, 51, 0.6);
+}
+main .slide-counter .pag .circle:hover {
+  background: rgba(204, 204, 204, 0.4);
 }
 main .box {
   width: 100%;

@@ -58,10 +58,11 @@ main{
      .slide-default;
      .slide-counter{
             display: inline-block;
-            margin: 0 0 0 2%;
+            margin: 0px;
+            width: 100%;
         .pag{
             position: relative;
-            width: 10%;
+            width: 50%;
             height: 20px;
             display: inline-block;
             margin: 2% auto;
@@ -72,10 +73,20 @@ main{
                 width: 20px;
                 height: 20px; 
                 background: rgb(204,204,204);
+                margin: 0 2% 0 0;
+                cursor: pointer;
+                .transition(all, .3s, ease-in-out);
+
+                &.active{  
+                    background: rgb(51,51,51); 
+
+                    &:hover{
+                        background: rgba(51,51,51,.6); 
+                    }
+                }
+
+                &:hover{ background: rgba(204,204,204,.4); }
             }
-            .circle.active{
-                background: #333;
-            } 
         }
      }
 
