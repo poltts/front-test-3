@@ -9,7 +9,7 @@ const app        = express();
 const helmet     = require('helmet');
 const logger     = require('morgan'); 
 
-const port       = 8080;
+const port       = process.env.PORT || 8080;
 const uri        = 'http: //localhost: ' + port; 
 
 app.use(helmet());
