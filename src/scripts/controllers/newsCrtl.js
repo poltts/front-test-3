@@ -24,24 +24,11 @@ site.controller('newsController', ['$scope', '$location', '$http', '$route', '$r
         var id = ($scope.currentId - 1);
         $http.get('https://api.myjson.com/bins/a56hd')
         .then(function(response) {
-            $scope.newsData = response.data[id]; 
-            console.log(response.data[id]); 
+            $scope.newsData = response.data[id];  
         }, function(err) {
             console.log(err);
         });
 
-    };
-     console.log($scope.currentId);
-     console.log($scope.news);
-
-    // $scope.getNews();
-    // $scope.numPages = Math.floor($scope.newsTotal/$scope.pageCount);
-
-    $scope.openBox = function(id){
-        $scope.$apply(function() {
-            $location.path('/news/'+id);
-        });
-    };
-
+    }; 
 
 }]);

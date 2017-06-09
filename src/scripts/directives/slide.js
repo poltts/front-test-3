@@ -32,8 +32,7 @@ site.directive('slide', function($timeout) {
           scope.currentIndex = scope.currentIndex + 1;
         }
          
-      };
-      console.log(total);
+      }; 
       scope.move = function(id){
         return scope.currentIndex = id;
       };
@@ -41,8 +40,7 @@ site.directive('slide', function($timeout) {
         image.visible = false; 
       });
       scope.images[scope.currentIndex].visible = true;
-      scope.$watch('currentIndex', function() {
-      console.log(scope.currentIndex);
+      scope.$watch('currentIndex', function() { 
         scope.$on('$destroy', function() {
           $timeout.cancel(timer); 
         });
